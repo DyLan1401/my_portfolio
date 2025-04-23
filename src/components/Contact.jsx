@@ -1,0 +1,70 @@
+import React from "react";
+import { FiUser,FiMail,FiMessageSquare } from "react-icons/fi";
+import { motion} from "framer-motion";
+
+const Contact = ()=>{
+    return(
+        <>
+        <section
+        id="contact"
+        data-aos="fade-up"
+        data-aos-delay="250"
+         className=" py-20 px-4 bg-gradient-to-b">
+            <div className="max-w-lg mx-auto relative">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-2">
+Get in <span className="text-red-600">Touch</span>
+                    </h2>
+
+                </div>
+                <form action="" className="space-y-6 bg-gray-200/85 p-8 rounded-xl shadow-md border border-gray-500">
+                <motion.div whileHover={{scale:1.01}}>
+                <label className="box text-gray-700 mb-2">Name</label>
+                <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <FiUser className="text-gray-400"  />
+                    </div>
+                    <input type="text" className="w-full pl-10 pr-4 py-3 border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent" placeholder="Name" />
+                </div>
+                </motion.div>
+                <motion.div whileHover={{scale:1.01}}>
+                <label className="box text-gray-700 mb-2">Email</label>
+                <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <FiMail className="text-gray-400"  />
+                    </div>
+                    <input type="email" className="w-full pl-10 pr-4 py-3 border-gray-900   rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent" placeholder="Mail" />
+                </div>
+                </motion.div>
+                <motion.div whileHover={{scale:1.01}}>
+                <label className="box text-gray-700 mb-2">Message</label>
+                <div className="relative">
+                    <div className="absolute top-3 left-3">
+                        <FiMessageSquare className="text-gray-400"  />
+                    </div>
+                    <textarea
+                    rows={4}
+                     className="w-full pl-10 pr-4 py-3 border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent" placeholder="Messsage" />
+                </div>
+                </motion.div>
+
+                <motion.button
+                
+                type="submit"
+                whileHover={{scale: 1.02}}
+                whileTap={{scale: 0.98}}
+                className="w-full py-3 px-6 bg-red-500 text-white rounded-lg font-medium hover:bg-red-600 transition-all">Send Message
+                
+                </motion.button>
+                </form>
+            </div>
+            <div className="mt-8 text-center text-gray-800">
+                <p>Or email me directly at:<span className="text-gray-900 font-bold">nlan4670@gmail.com</span></p>
+            </div>
+
+        </section>
+        </>
+    )
+}
+
+export default Contact
