@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://DyLan1401.github.io/https://github.com/DyLan1401/my_portfolio.git",
+"homepage": "https://dylan1401.github.io/my_portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
