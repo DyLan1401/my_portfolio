@@ -3,6 +3,7 @@ import facebook from "../assets/facbook.jpg";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import Lan from "../assets/Lan.jpg";
+import CV from "../assets/ThanhLan_CV.pdf"
 const Hero = () => {
   return (
     <>
@@ -67,8 +68,8 @@ const Hero = () => {
 
               <div className="flex justify-center">
                 <a
-                  href={Lan}
-                  download=""
+                  href={CV}
+                  download="ThanhLan_CV.pdf"
                   className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-700 rounded-full text-lg hover:shadow-[0_0_20px_rgba(225,100,100,0.5)] transition-all"
                 >
                   Download CV
