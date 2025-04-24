@@ -1,16 +1,18 @@
 {
+  "homepage": "https://dylan1401.github.io/my_portfolio/",
+
   "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dylan1401.github.io/my_portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+        "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
+
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",

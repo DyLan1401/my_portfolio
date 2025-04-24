@@ -1,5 +1,4 @@
 import React from "react";
-import facebook from "../assets/facbook.jpg";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import Lan from "../assets/Lan.jpg";
@@ -23,13 +22,6 @@ const Hero = () => {
                 className="flex space-x-4 md-2"
                 aria-label="Social media links"
               >
-                <a href="https://www.facebook.com/" aria-label="facebook">
-                  <img
-                    src={facebook}
-                    alt="facebook"
-                    className="w-14 h-14 hover:scale-110 transition-transform"
-                  />
-                </a>
                 <a href="https://github.com/DyLan1401" aria-label="github">
                   <img
                     src={github}
