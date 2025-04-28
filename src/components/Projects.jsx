@@ -4,12 +4,13 @@ import { MarsStroke } from "lucide-react";
 import portfolio1 from "../assets/portfolio.jpg"
 import todo from "../assets/todo.jpg"
 import weather from "../assets/weather.jpg"
+import quizz from "../assets/quizphoto.jpg"
 const projects = [
   {
     id: 1,
     title: "Portfolio",
     desc: "A personal portfolio website built with React and styled using Tailwind CSS, showcasing my projects, skills, and experience as a frontend developer",
-    technologies: ["React", "Tailwind","git"],
+    technologies: ["React", "Tailwind","git","CSS"],
     github: "https://github.com/DyLan1401/my_portfolio",
     demo: "",
     image: portfolio1,
@@ -32,11 +33,21 @@ const projects = [
     demo: "https://dylan1401.github.io/weather_clone/",
     image: weather,
   },
+  {
+    id: 4,
+    title: "Quiz",
+    desc: "",
+    technologies: ["Tailwind", "HTML", "CSS","git","ReactJS" ],
+    github: "https://github.com/DyLan1401/Quiz",
+    demo: "https://dylan1401.github.io/Quiz/",
+    image: quizz,
+  },
+  
 ];
 
 const Project = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const projectsPage = 2;
+  const projectsPage = 3;
 
   const nextSlile = () => {
     setCurrentIndex((prevIndex) =>
@@ -80,11 +91,11 @@ const Project = () => {
             </button>
             <button
               onClick={nextSlile}
-              className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-gray-300 p-2 rounded-full shadow-md hover:bg-gray-100 z-10"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12  bg-gray-300 p-2 rounded-full shadow-md hover:bg-gray-100 z-10"
             >
               <FiChevronRight className="text-gray-700 text-xl" />
             </button>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
               {visibleProjects.map((project) => (
                 <div
                   key={project.id}
@@ -107,7 +118,7 @@ const Project = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 p-2">
                     <a
                       href={project.github}
                       className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
