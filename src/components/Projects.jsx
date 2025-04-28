@@ -36,7 +36,7 @@ const projects = [
   {
     id: 4,
     title: "Quiz",
-    desc: "",
+    desc: "This is a quiz show where the contestant has to find the correct answer from multiple options, true or false, and will earn points for each correct answer.",
     technologies: ["Tailwind", "HTML", "CSS","git","ReactJS" ],
     github: "https://github.com/DyLan1401/Quiz",
     demo: "https://dylan1401.github.io/Quiz/",
