@@ -1,34 +1,35 @@
 import React, { useState } from "react";
-import {FiChevronLeft,FiChevronRight,FiExternalLink,FiGithub} from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiExternalLink, FiGithub } from 'react-icons/fi';
 import { MarsStroke } from "lucide-react";
 import portfolio1 from "../assets/portfolio.jpg"
 import todo from "../assets/todo.jpg"
 import weather from "../assets/weather.jpg"
 import quizz from "../assets/quizphoto.jpg"
+import medical from "../assets/medical.png/"
 const projects = [
   {
     id: 1,
     title: "Portfolio",
     desc: "A personal portfolio website built with React and styled using Tailwind CSS, showcasing my projects, skills, and experience as a frontend developer",
-    technologies: ["React", "Tailwind","git","CSS"],
+    technologies: ["React", "Tailwind", "git", "CSS"],
     github: "https://github.com/DyLan1401/my_portfolio",
     demo: "",
     image: portfolio1,
   },
   {
     id: 2,
-    title:"ToDoList",
+    title: "ToDoList",
     desc: "This is a list of things to do when users want to use and manage time most effectively.",
-    technologies: ["React", "CSS","git"],
+    technologies: ["React", "CSS", "git"],
     github: "https://github.com/DyLan1401/todo_List",
     demo: "",
-    image:todo,
+    image: todo,
   },
   {
     id: 3,
     title: "Weather",
     desc: "This application uses an API to display the weather of areas near the location you are interested in.",
-    technologies: ["JS", "HTML", "CSS","git" ],
+    technologies: ["JS", "HTML", "CSS", "git"],
     github: "https://github.com/DyLan1401/weather_clone",
     demo: "https://dylan1401.github.io/weather_clone/",
     image: weather,
@@ -37,12 +38,21 @@ const projects = [
     id: 4,
     title: "Quiz",
     desc: "This is a quiz show where the contestant has to find the correct answer from multiple options, true or false, and will earn points for each correct answer.",
-    technologies: ["Tailwind", "HTML", "CSS","git","ReactJS" ],
+    technologies: ["Tailwind", "HTML", "CSS", "git", "ReactJS"],
     github: "https://github.com/DyLan1401/Quiz",
     demo: "https://dylan1401.github.io/Quiz/",
     image: quizz,
   },
-  
+  {
+    id: 5,
+    title: "Medical apponiment",
+    desc: "This is an appointment scheduling website that helps facilities and clinics optimize their customer schedules and customers have better control over their time.",
+    technologies: ["Tailwind", "Laravel", "git", "ReactJS"],
+    github: "https://github.com/DyLan1401/med-appointment",
+    image: medical,
+  }
+
+
 ];
 
 const Project = () => {
@@ -79,7 +89,7 @@ const Project = () => {
               My <span className="text-red-600">Projects</span>
             </h3>
             <p className="text-gray-300 max-w-2xl mx-auto">
-            These are the projects where I applied the knowledge and experience I have learned and explored.
+              These are the projects where I applied the knowledge and experience I have learned and explored.
             </p>
           </div>
           <div className="relative">
@@ -137,13 +147,13 @@ const Project = () => {
             </div>
           </div>
           <div className="flex justify-center mt-8 space-x-2">
-{
-    Array.from({length: Math.ceil(projects.length/projectsPage)}).map((_,index)=>(
-        <button key={index} onClick={()=>setCurrentIndex(index*projectsPage)}
-        className={`w-3 h-3 rounded-full ${currentIndex === index * projectsPage ? 'bg-blue-600': 'bg-gray-300'}`}></button>
+            {
+              Array.from({ length: Math.ceil(projects.length / projectsPage) }).map((_, index) => (
+                <button key={index} onClick={() => setCurrentIndex(index * projectsPage)}
+                  className={`w-3 h-3 rounded-full ${currentIndex === index * projectsPage ? 'bg-blue-600' : 'bg-gray-300'}`}></button>
 
-    ))
-}
+              ))
+            }
           </div>
         </div>
       </section>
